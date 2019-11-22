@@ -27,16 +27,11 @@ return array(
 	'elgg_connect:label:action_h2' 		=> 'Call to action subheader',	
 	'elgg_connect:label:caption_h1' 	=> 'Caption header',
 	'elgg_connect:label:caption_h2' 	=> 'Caption subheader',
-	
-	'elgg_connect:label:enable:action' 	=> 'Show action section (fill in the fields below)',
-	'elgg_connect:label:enable:members' => 'Show members section (fill in the fields below)',
-	'elgg_connect:label:enable:groups' 	=> 'Show groups section (fill in the fields below)',
-	
 	'elgg_connect:label:friends'		=> 'Show friends',
 	'elgg_connect:label:groups'			=> 'Groups header',
 	'elgg_connect:label:members'		=> 'Members header',
 	'elgg_connect:label:sidebar'		=> 'Sidebar on activity page:',
 	'elgg_connect:label:sidebar:yes'	=> 'If sidebar, select content below:',
 	'elgg_connect:label:user:icon'		=> 'Show profile icon',
-
+	'elgg_connect:label:webmap'			=> 'Show Webmap',
 );

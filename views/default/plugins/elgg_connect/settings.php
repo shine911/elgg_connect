@@ -30,15 +30,6 @@ $front .= elgg_view_field([
 			'value' => $plugin->caption_h2,
 		],
 		[
-			'#type' => 'checkbox',
-			'#label' => elgg_echo('elgg_connect:label:enable:action'),
-			'name' => 'params[display_action]',
-			'default' => 'no',
-			'value' => 'yes',
-			'checked' => $plugin->display_action === 'yes',
-			'switch' => true,
-		],
-		[
 			'#type' => 'text',
 			'#label' => elgg_echo('elgg_connect:label:action_h1'),
 			'name' => 'params[action_h1]',
@@ -51,28 +42,10 @@ $front .= elgg_view_field([
 			'value' => $plugin->action_h2,
 		],
 		[
-			'#type' => 'checkbox',
-			'#label' => elgg_echo('elgg_connect:label:enable:members'),
-			'name' => 'params[display_members]',
-			'default' => 'no',
-			'value' => 'yes',
-			'checked' => $plugin->display_members === 'yes',
-			'switch' => true,
-		],
-		[
 			'#type' => 'text',
 			'#label' => elgg_echo('elgg_connect:label:members'),
 			'name' => 'params[members_h1]',
 			'value' => $plugin->members_h1,
-		],
-		[
-			'#type' => 'checkbox',
-			'#label' => elgg_echo('elgg_connect:label:enable:groups'),
-			'name' => 'params[display_groups]',
-			'default' => 'no',
-			'value' => 'yes',
-			'checked' => $plugin->display_groups === 'yes',
-			'switch' => true,
 		],
 		[
 			'#type' => 'text',
@@ -137,5 +110,39 @@ $sidebar .= elgg_view_field([
 		],
 	],
 ]);
-	
+
+$sidebar .= elgg_view_field([
+	'#type' => 'fieldset',
+	'id' => 'elgg_connect-webmap',
+	'fields' => [
+		[
+			'#type' => 'select',
+			'#label' => elgg_echo('elgg_connect:label:webmap'),
+			'name' => 'params[webmap]',
+			'options_values' => [
+				'no' => elgg_echo('option:no'),
+				'yes' => elgg_echo('option:yes')
+			],
+			'value' => $plugin->webmap,
+		],
+	],
+]);
+
+$sidebar .= elgg_view_field([
+	'#type' => 'fieldset',
+	'id' => 'elgg_connect-wiki',
+	'fields' => [
+		[
+			'#type' => 'select',
+			'#label' => elgg_echo('elgg_connect:label:wiki'),
+			'name' => 'params[wiki]',
+			'options_values' => [
+				'no' => elgg_echo('option:no'),
+				'yes' => elgg_echo('option:yes')
+			],
+			'value' => $plugin->wiki,
+		],
+	],
+]);
+
 echo elgg_view_module('info', elgg_echo('elgg_connect:header:sidebar'), $sidebar);

@@ -16,25 +16,15 @@ img {
 .elgg-river-layout .elgg-avatar-large > a img {
 	width: 20rem;
 }
+.elgg-menu-filter,
+.elgg-tabs {
+    margin-bottom: 1rem;
+}
 .elgg-menu-filter > li,
 .elgg-tabs > li {
 	margin: 0;
 	border-radius: 0;
     flex-grow: 1;
-}
-/* fix: align river selector */
-.elgg-menu-filter,
-.elgg-tabs {
-    margin-bottom: 1rem;
-}
-/* fix: autocomplete padding */
-.elgg-autocomplete-item {
-    padding: .5rem .25rem;
-	line-height: 1.2;
-}
-/* fix: login dropdown bottom links */
-.elgg-menu-login > li > a {
-    padding: 1rem 1rem 0 0;
 }
 /* ***************************************
 	INDEX
@@ -83,8 +73,6 @@ img {
 }
 .elgg-landing-page .elgg-image-block .elgg-image {
 	margin-right: 0;
-	max-height: 10rem;
-	overflow: hidden;
 }
 .elgg-landing-page .elgg-image-block .elgg-body {
 	align-self: center;
@@ -100,6 +88,7 @@ img {
 	max-width: 24rem;
 }
 /* 	featured module */
+.elgg-featured,
 .elgg-featured-container {
 	position: relative;
 	zoom: 1;		
@@ -109,10 +98,8 @@ img {
 	overflow: hidden;
 	background: #FFF;
 }
-.slide {
-	background-repeat: no-repeat; 
-	background-position: center center;
-	background-size: cover;
+.elgg-featured-container img { 
+	width: 100%;
 }
 .elgg-featured-container,
 .elgg-featured-container .slide {
@@ -124,7 +111,7 @@ img {
 	-o-transition: 		all 0.3s;
 	transition: 		all 0.3s;
 }
-.elgg-caption {
+.ez-caption {
 	position: absolute; 
 	top: 11.25rem; 
 	width: 100%;
@@ -140,7 +127,7 @@ img {
 	-o-transition: 		all 0.3s;
 	transition: 		all 0.3s;
 }
-.elgg-caption h1 {
+.ez-caption h1 {
 	color: #F7F1E9;
 	font-size: 4.0rem;
 	line-height: 1;
@@ -152,7 +139,7 @@ img {
 	-o-transition: 		all 0.3s;
 	transition: 		all 0.3s;
 }
-.elgg-caption h2 {
+.ez-caption h2 {
 	color: #FFF;
 	font-weight: normal;
 	font-size: 2.4rem;
@@ -163,7 +150,7 @@ img {
 	-o-transition: 		all 0.3s;
 	transition: 		all 0.3s;
 }
-.elgg-caption .elgg-inner {
+.ez-caption .elgg-inner {
 	text-align: center;
 	width: 100%;
 	position: relative;
@@ -176,7 +163,6 @@ img {
 }
 .groups-profile > .elgg-image {
     margin-right: 0;
-	width: 100%;
 }
 .groups-profile > .elgg-image img {
 	width: 100%;
@@ -195,9 +181,6 @@ img {
 		align-items: center;
 		margin-top: 2rem;
 	}
-	.elgg-landing-page .elgg-image-block .elgg-image {
-		max-height: 10.375rem;
-	}
 	.elgg-container.groups .elgg-layout-header {
 		margin-bottom: 0;
 	}
@@ -210,21 +193,20 @@ img {
 	.elgg-featured-container .slide {
 		height: 21rem;
 	}
-	.elgg-caption {
+	.ez-caption {
 		top: 6rem; 
 	}
-	.elgg-caption h1 {
+	.ez-caption h1 {
 		font-size: 3.4rem;
 		padding-bottom: .75rem;
 	}
-	.elgg-caption h2 {
+	.ez-caption h2 {
 		font-size: 2.0rem;
 	}
-	/* fix: layout break */
 	#groups-tools {
 		grid-template-columns: none;
 	}
-	.elgg-container.members .elgg-item {
+	.elgg-container.users .elgg-item {
 		flex: 1 0 26%;
 		margin-bottom: 1rem;
 	}
@@ -240,14 +222,14 @@ img {
 	.elgg-featured-container .slide {
 		height: 15rem;
 	}
-	.elgg-caption {
+	.ez-caption {
 		top: 5rem; 
 	}
-	.elgg-caption h1 {
+	.ez-caption h1 {
 		font-size: 2.4rem;
 		padding-bottom: .5rem;
 	}
-	.elgg-caption h2 {
+	.ez-caption h2 {
 		font-size: 1.6rem;
 	}
 	.elgg-landing-page-body .action {
@@ -259,7 +241,7 @@ img {
 	.elgg-landing-page .elgg-layout-header h1 {
 		font-size: 1.6rem;
 	}
-	.elgg-container.members .elgg-item {
+	.elgg-container.users .elgg-item {
 		flex: 1 0 41%;
 	}
 	.elgg-landing-page-body h2 {
@@ -290,7 +272,7 @@ img {
 		line-height: 1.2 !important;
 	}
 	.elgg-layout-header > .elgg-menu-container {
-		padding: 0 0.25rem 0.5rem 0.25rem;
+		padding: 0 0.5rem 0.5rem 0.5rem;
 	}
 	.elgg-layout-sidebar {
 		padding-top: 1rem;
@@ -309,18 +291,5 @@ img {
 	}
 	.elgg-list > li:last-child {
 		border-bottom: none;
-	}
-	/* fix: settings > account info */
-	.elgg-table-alt th:first-child,
-	.elgg-table-alt td:first-child {
-		width: auto;
-	}
-	/* fix: messages buttons */
-	.elgg-fieldset-horizontal.elgg-justify-right .elgg-field {
-		margin: 0 .25rem .25rem;
-	}
-	/* fix: profile double line */
-	.elgg-layout.profile .elgg-sidebar-alt {
-		border: none;
 	}
 }
